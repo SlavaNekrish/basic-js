@@ -23,7 +23,7 @@ function dateSample(sampleActivity) {
   let age = Math.log(MODERN_ACTIVITY / sampleActivity) / k;
   let roundedAge = age.toFixed(0);
   if (!(roundedAge ^ 0) || roundedAge < 0) return false;
-  return roundedAge > age ? +roundedAge : ++roundedAge;
+  return roundedAge > age ? +roundedAge : +roundedAge + 1;
 }
 
 module.exports = {
